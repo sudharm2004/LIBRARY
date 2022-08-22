@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>sudharm library</title>
+  </head>
+  <body>
+    <!-- NAVBAR CODE FROM BOOTSRAP -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" contenteditable="true">Library</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input id="searchText" class="form-control me-2" type="search" placeholder="Search Note Using Title" aria-label="Search" onblur="onblurfun()">
+                    <!-- NOT USING THE BUTTON TO SEARCH NOTES RIGHT NOW -->
+                    <!-- <button class="btn btn-outline-success" type="submit" >Search</button> -->
+                </form>
+            </div>
+        </div>
+    </nav>
+    
+        <div id="message"></div>
+    
+    
+        <div class="container my-3">
+            <h1 class="hide">Sudharm Library</h1>
+            <hr class="hide">
+            <form id="libraryForm" class="hide">
+                <div class="form-group row">
+                    <label for="bookName" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control my-2" id="bookName" placeholder="Book Name">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="Author" class="col-sm-2 col-form-label">Author</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control my-2" id="author" placeholder="Author">
+                    </div>
+                </div>
+                <fieldset class="form-group">
+                    <div class="row">
+                        <legend class="col-form-label col-sm-2 pt-0">Type</legend>
+                        <div class="col-sm-10">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="type" id="fiction" value="fiction"
+                                    checked>
+                                <label class="form-check-label" for="fiction">
+                                    Fiction
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="type" id="programming"
+                                    value="programming">
+                                <label class="form-check-label" for="programming">
+                                    Computer Programming
+                                </label>
+                            </div>
+                            <div class="form-check disabled">
+                                <input class="form-check-input" type="radio" name="type" id="cooking" value="cooking">
+                                <label class="form-check-label" for="cooking">
+                                    Cooking
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+    
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-primary">Add Book</button>
+                    </div>
+                </div>
+            </form>
+
+            <div id="table" class="my-2">
+                <h1 id="books">Your Books</h1>
+                <table class="table" id="table1" >
+                    <thead>
+                      <tr>
+                        <!-- <th scope="col">Bookcode</th> -->
+                        <th scope="col">name</th>
+                        <th scope="col">author</th>
+                        <th scope="col">type</th>
+                        <th scope="col">delete</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tablebody">
+                
+                      </tbody>
+                  </table>
+            </div>
+
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+            <script src="index.js"></script>
+        </body>
+        </html>
